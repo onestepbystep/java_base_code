@@ -15,13 +15,14 @@ public class SocketClientExam {
 
         InputStream inputStream = socket.getInputStream();
         OutputStream outputStream = socket.getOutputStream();
-        //  向服务端写入数据
-        outputStream.write("您好，我是客户端".getBytes());
+
 
         //  从服务端收到数据
         byte[] buf = new byte[1024*1024];
         int len = inputStream.read(buf);
         while(len!=-1) {
+            //  向服务端写入数据
+            outputStream.write("您好，我是客户端".getBytes());
             String message = new String(buf,0,len );
             System.out.println("客户端收到服务器信息："+message);
             len = inputStream.read(buf);

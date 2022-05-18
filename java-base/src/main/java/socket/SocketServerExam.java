@@ -16,6 +16,7 @@ public class SocketServerExam {
         ServerSocket serverSocket = new ServerSocket(9000);
 
         Socket socket = serverSocket.accept();
+        System.out.println("客户端和服务端连接成功");
         //  监听端口，输入流
         InputStream inputStream = socket.getInputStream();
         //  输出流

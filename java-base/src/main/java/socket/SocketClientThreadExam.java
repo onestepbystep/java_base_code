@@ -17,7 +17,7 @@ public class SocketClientThreadExam {
                 @Override
                 public void run() {
                     try (
-                         Socket socket = new Socket("localhost", 9001) ;
+                         Socket socket = new Socket("localhost", 9000) ;
                          InputStream inputStream = socket.getInputStream();
                          OutputStream outputStream = socket.getOutputStream()){
 
